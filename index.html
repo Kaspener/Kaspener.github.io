@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Даниил & Анастасия — Приглашение</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: '#a43c52',
+            paper: '#fff0eb',
+            pudra: '#faedcd',
+            blush: '#faeef1',
+          },
+          fontFamily: {
+            heading: ['Cormorant Garamond', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #e0d8d0; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .heart-pulse { animation: pulse 3s ease-in-out infinite; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up  { animation: fadeUp 0.7s ease both; }
+    .delay-1  { animation-delay: 0.15s; }
+    .delay-2  { animation-delay: 0.3s; }
+    .divider  { border: none; height: 1px;
+      background: linear-gradient(to right, transparent, #a43c5244, transparent); }
+    .btn-wine {
+      display: inline-block; background: #a43c52; color: white;
+      font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+      letter-spacing: 0.15em; padding: 11px 34px; border-radius: 999px;
+      text-transform: uppercase; text-decoration: none; transition: opacity .2s;
+    }
+    .btn-wine:hover { opacity: 0.85; }
+
+    /* Наклон фото локации */
+    .photo-left  { transform: rotate(-3deg); }
+    .photo-right { transform: rotate(3deg); }
+    .photo-left:hover  { transform: rotate(-1deg) scale(1.03); transition: transform .3s; }
+    .photo-right:hover { transform: rotate(1deg)  scale(1.03); transition: transform .3s; }
+  </style>
+</head>
+
+<body class="min-h-screen flex justify-center py-10 px-4 font-body">
+
+<div class="bg-paper w-full max-w-sm rounded-3xl shadow-2xl overflow-hidden">
+
+  <!-- 1. ШАПКА: БАНТ + ДАТА + ИМЕНА -->
+  <div class="text-center pb-3 px-6 fade-up">
+    <img src="assets/bantik.jpg" alt="Бант" class="w-full max-w-xs mx-auto -mb-16">
+    <p class="font-body text-xs tracking-widest text-gray-400">17 / 07 / 2026</p>
+    <h1 class="font-heading mt-2 text-5xl font-semibold text-wine leading-none">
+      Даниил <br> &amp; <br> Анастасия
+    </h1>
+  </div>
+
+  <!-- 2. ФОТО В СЕРДЦЕ -->
+  <div class="flex justify-center items-center py-3 px-6 fade-up delay-1">
+    <div class="relative w-64 h-64 heart-pulse">
+      <svg viewBox="0 0 260 260" class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="hc">
+            <path d="M130,218 C130,218 18,148 18,78 C18,43 46,18 78,18 C98,18 116,30 130,47 C144,30 162,18 182,18 C214,18 242,43 242,78 C242,148 130,218 130,218Z"/>
+          </clipPath>
+        </defs>
+        <path d="M130,218 C130,218 18,148 18,78 C18,43 46,18 78,18 C98,18 116,30 130,47 C144,30 162,18 182,18 C214,18 242,43 242,78 C242,148 130,218 130,218Z" fill="#dba0b0" opacity="0.45"/>
+        <image href="https://avatars.mds.yandex.net/i?id=cfb43c37a938d7db26caec714bfa8a12_l-5666317-images-thumbs&n=13"
+               x="18" y="18" width="224" height="224" clip-path="url(#hc)" preserveAspectRatio="xMidYMid slice"/>
+        <path d="M130,218 C130,218 18,148 18,78 C18,43 46,18 78,18 C98,18 116,30 130,47 C144,30 162,18 182,18 C214,18 242,43 242,78 C242,148 130,218 130,218Z"
+              fill="none" stroke="#a43c52" stroke-width="2.5"/>
+        <path d="M130,218 C130,218 18,148 18,78 C18,43 46,18 78,18 C98,18 116,30 130,47 C144,30 162,18 182,18 C214,18 242,43 242,78 C242,148 130,218 130,218Z"
+              fill="none" stroke="#a43c52" stroke-width="1" stroke-dasharray="4 7" opacity="0.4"
+              transform="translate(-8,-7) scale(1.065)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 3. ТЕКСТ -->
+  <div class="text-center px-8 pt-1 pb-5 fade-up delay-2">
+    <h2 class="font-heading text-3xl font-semibold text-wine italic">У нас свадьба!</h2>
+    <p class="font-body text-sm text-gray-600 mt-3 leading-relaxed">
+      Дорогие друзья и близкие,<br>
+      мы приглашаем вас разделить с нами<br>
+      наше свадебное торжество.<br>
+      <em>С нетерпением ждём встречи!</em>
+    </p>
+  </div>
+
+  <!-- Купидоны -->
+  <div class="flex justify-center pb-5 px-6">
+    <img src="assets/kupidoni.jpg" alt="Купидоны" class="w-full rounded-xl">
+  </div>
+
+  <hr class="divider mx-6">
+
+  <!-- 4. ДАТА / КАЛЕНДАРЬ -->
+  <div class="px-6 py-6">
+    <h2 class="font-heading text-center text-3xl font-semibold text-wine italic mb-4">Дата торжества</h2>
+    <div class="border-2 border-wine rounded-2xl overflow-hidden">
+      <svg width="100%" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .ct { font: 500 17px 'Cormorant Garamond',serif; fill:#a43c52; }
+          .cd { font: 11px 'Raleway',sans-serif; fill:#888; }
+          .cn { font: 13px 'Raleway',sans-serif; fill:#333; }
+        </style>
+        <text x="150" y="26" text-anchor="middle" class="ct">Июль 2026</text>
+        <g class="cd" text-anchor="middle">
+          <text x="30" y="50">Пн</text><text x="70" y="50">Вт</text>
+          <text x="110" y="50">Ср</text><text x="150" y="50">Чт</text>
+          <text x="190" y="50">Пт</text><text x="230" y="50">Сб</text>
+          <text x="270" y="50">Вс</text>
+        </g>
+        <g class="cn" text-anchor="middle">
+          <text x="110" y="80">1</text><text x="150" y="80">2</text>
+          <text x="190" y="80">3</text><text x="230" y="80">4</text><text x="270" y="80">5</text>
+          <text x="30" y="110">6</text><text x="70" y="110">7</text>
+          <text x="110" y="110">8</text><text x="150" y="110">9</text>
+          <text x="190" y="110">10</text><text x="230" y="110">11</text><text x="270" y="110">12</text>
+          <text x="30" y="140">13</text><text x="70" y="140">14</text>
+          <text x="110" y="140">15</text><text x="150" y="140">16</text>
+          <text x="230" y="140">18</text><text x="270" y="140">19</text>
+          <text x="30" y="170">20</text><text x="70" y="170">21</text>
+          <text x="110" y="170">22</text><text x="150" y="170">23</text>
+          <text x="190" y="170">24</text><text x="230" y="170">25</text><text x="270" y="170">26</text>
+          <text x="30" y="200">27</text><text x="70" y="200">28</text>
+          <text x="110" y="200">29</text><text x="150" y="200">30</text><text x="190" y="200">31</text>
+        </g>
+        <path d="M190,122 C186,112 170,115 170,128 C170,139 190,150 190,150 C190,150 210,139 210,128 C210,115 194,112 190,122Z" fill="#a43c52"/>
+        <text x="190" y="137" text-anchor="middle" font-family="'Raleway',sans-serif" font-size="13" font-weight="600" fill="white">17</text>
+      </svg>
+    </div>
+  </div>
+
+  <hr class="divider mx-6">
+
+  <!-- 5. ТАЙМИНГ ДНЯ -->
+  <div class="px-6 py-6">
+    <h2 class="font-heading text-center text-3xl font-semibold text-wine italic mb-6">Тайминг дня</h2>
+    <div class="relative">
+      <div class="absolute left-8 top-4 bottom-4 w-px bg-wine opacity-20"></div>
+      <div class="space-y-6">
+
+        <div class="flex items-center gap-5">
+          <div class="flex-shrink-0 w-16 h-16 rounded-full border-2 border-wine bg-paper flex items-center justify-center z-10">
+            <svg viewBox="0 0 40 40" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="13" stroke="#a43c52" stroke-width="1.5"/>
+              <line x1="20" y1="20" x2="20" y2="10" stroke="#a43c52" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="20" y1="20" x2="27" y2="24" stroke="#a43c52" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="1.8" fill="#a43c52"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-2xl font-semibold text-gray-800 leading-none">14:00</p>
+            <p class="font-body text-xs text-gray-500 mt-0.5">сбор гостей</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <div class="flex-shrink-0 w-16 h-16 rounded-full border-2 border-wine bg-paper flex items-center justify-center z-10">
+            <svg viewBox="0 0 40 40" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15" cy="20" r="8" stroke="#a43c52" stroke-width="1.5"/>
+              <circle cx="25" cy="20" r="8" stroke="#a43c52" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-2xl font-semibold text-gray-800 leading-none">15:00</p>
+            <p class="font-body text-xs text-gray-500 mt-0.5">банкет</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <div class="flex-shrink-0 w-16 h-16 rounded-full border-2 border-wine bg-paper flex items-center justify-center z-10">
+            <svg viewBox="0 0 40 40" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- ноты / дискотека -->
+              <path d="M14 28 L14 18 L26 15 L26 25" stroke="#a43c52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="28" r="3" stroke="#a43c52" stroke-width="1.5"/>
+              <circle cx="24" cy="25" r="3" stroke="#a43c52" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-2xl font-semibold text-gray-800 leading-none">21:00</p>
+            <p class="font-body text-xs text-gray-500 mt-0.5">конец банкета, начало дискотеки</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <div class="flex-shrink-0 w-16 h-16 rounded-full border-2 border-wine bg-paper flex items-center justify-center z-10">
+            <svg viewBox="0 0 40 40" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- звезда / завершение -->
+              <path d="M20 8 L22.5 15.5 L30 15.5 L24 20 L26.5 27.5 L20 23 L13.5 27.5 L16 20 L10 15.5 L17.5 15.5 Z"
+                    stroke="#a43c52" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-2xl font-semibold text-gray-800 leading-none">22:00</p>
+            <p class="font-body text-xs text-gray-500 mt-0.5">завершение вечера</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider mx-6">
+
+  <!-- 6. ЛОКАЦИЯ — две фото с наклоном -->
+  <div class="px-6 py-6">
+    <h2 class="font-heading text-center text-3xl font-semibold text-wine italic mb-6">Локация</h2>
+
+    <!-- Две фото с наклоном -->
+    <div class="relative flex justify-center items-center h-36 mb-2">
+      <!-- Левая фото (наклон влево) -->
+      <div class="photo-left absolute left-2 w-40 shadow-lg rounded-xl overflow-hidden border-4 border-white z-10">
+        <img src="assets/shalet.jpg"
+             alt="Ресторан Shalet" class="w-full h-32 object-cover">
+      </div>
+      <!-- Правая фото (наклон вправо) -->
+      <div class="photo-right absolute right-2 w-40 shadow-lg rounded-xl overflow-hidden border-4 border-white z-20">
+        <img src="assets/shalet2.webp"
+             alt="Ресторан Shalet внутри" class="w-full h-32 object-cover">
+      </div>
+    </div>
+
+    <p class="font-body text-center text-sm text-gray-700">
+      Ресторан <strong>Shalet</strong><br>
+      Парк Заельцовский, Парковая улица, 88 к1
+    </p>
+  </div>
+
+  <hr class="divider mx-6">
+
+  <!-- 7. ДРЕСС-КОД -->
+  <div class="px-6 py-6 text-center">
+    <h2 class="font-heading text-3xl font-semibold text-wine italic mb-3">Дресс-код</h2>
+    <p class="font-body text-sm text-gray-600 leading-relaxed mb-6">
+      Чтобы воспоминания о свадьбе были положительными, а фотографии уникальными, просим вас поддержать цветовую палитру нашей свадьбы
+    </p>
+
+    <!-- 4 цветовых кружочка -->
+    <div class="flex justify-center items-center gap-5">
+      <!-- Пудровый -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-12 h-12 rounded-full shadow-md border-2 border-white" style="background:#684734;"></div>
+      </div>
+      <!-- Розовый -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-12 h-12 rounded-full shadow-md border-2 border-white" style="background:#fef1e1;"></div>
+      </div>
+      <!-- Винный -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-12 h-12 rounded-full shadow-md border-2 border-white" style="background:#bc9d9a;"></div>
+      </div>
+      <!-- Молочный -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-12 h-12 rounded-full shadow-md border-2 border-white" style="background:#99a287;"></div>
+      </div>
+    </div>
+
+    <p class="font-body text-xs text-gray-400 mt-5 italic">
+      Для мужчин возможен темный низ
+    </p>
+  </div>
+
+  <hr class="divider mx-6">
+
+  <!-- 8. ПОЖЕЛАНИЯ -->
+  <div class="px-6 py-6 text-center" style="background: #ebbec4;">
+    <h2 class="font-heading text-3xl font-semibold italic mb-3 text-wine">Пожелания</h2>
+    <p class="font-body text-sm leading-relaxed text-wine">
+      Дорогие родные и близкие!<br>
+      Просим не отягощать себя выбором подарков, наилучший подарок для нас — ваше присутствие и тёплые слова.<br>
+      Если хотите преподнести ценный подарок, мы будем очень благодарны за вклад в бюджет нашей молодой семьи, упакованный в конвертик.
+    </p>
+    <div class="flex justify-center mt-5">
+      <div class="rounded-3xl overflow-hidden">
+        <img src="assets/golubi.jpg" alt="Голуби" class="w-48">
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider mx-6">
+
+  <!-- 9. ВЫ ПРИДЁТЕ? -->
+  <div class="bg-paper px-6 py-6 text-center">
+    <h2 class="font-heading text-3xl font-semibold text-wine italic mb-3">Вы придёте?</h2>
+    <p class="font-body text-sm text-gray-600 leading-relaxed mb-5">
+      Мы будем очень рады видеть вас!<br>
+      Пожалуйста, подтвердите присутствие<br>
+      до 1 июля
+    </p>
+    <a href="#" class="btn-wine">Подтвердить присутствие</a>
+  </div>
+
+  <!-- 10. FOOTER -->
+  <div class="px-6 pt-8 pb-10 text-center">
+    <p class="font-body text-xs tracking-widest text-gray-300 uppercase mb-3">17 · 07 · 2026</p>
+    <h2 class="font-heading text-5xl font-light italic text-wine leading-none">До встречи!</h2>
+    <p class="font-heading text-2xl font-light text-gray-400 mt-2 tracking-wider">
+      Даниил &amp; Анастасия
+    </p>
+    <!-- Декоративная линия с сердечком -->
+    <div class="flex items-center justify-center gap-3 mt-5">
+      <div class="h-px w-16 bg-gradient-to-r from-transparent to-wine opacity-30"></div>
+      <span class="text-wine text-sm">❤</span>
+      <div class="h-px w-16 bg-gradient-to-l from-transparent to-wine opacity-30"></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
